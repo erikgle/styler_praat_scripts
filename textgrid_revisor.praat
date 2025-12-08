@@ -34,7 +34,7 @@ for ifile to number_files
 				Save as text file: "'directory$''soundname$'.TextGrid"
 			endif
 			lastsound$ = soundname$
-		endif
+		
 		selectObject: "Sound 'soundname$'"
 		plusObject: "TextGrid 'soundname$'"
 		Remove
