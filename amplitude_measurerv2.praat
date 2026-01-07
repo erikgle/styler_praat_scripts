@@ -27,8 +27,10 @@ for j from 1 to number_files
         select Strings list
         filename$ = Get string... 'j'
         Read from file... 'directory$''filename$'
-        soundname$ = selected$ ("Sound")
-	select Sound soundname$
+        
+        ##edit, using the sound name wasn't working properly
+        soundID = selected("Sound")
+	selectObject: soundID
 	do ("To Intensity...", 100, 0, "yes")
 	min = do ("Get minimum...", 0, 0, "Parabolic")
 	max = do ("Get maximum...", 0, 0, "Parabolic")
